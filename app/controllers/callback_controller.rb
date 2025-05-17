@@ -11,5 +11,7 @@ class CallbackController < ApplicationController
     body = JSON.parse(res.body)
     cookies[:strava_access_token] = body["access_token"]
     cookies[:strava_refresh_token] = body["refresh_token"]
+
+    redirect_to "/activity", allow_other_host: false
   end
 end

@@ -35,3 +35,10 @@ curl https://mise.run | sh
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 source ~/.bashrc
 mise use -g ruby@3
+
+
+TODOs:
+Set up user management stuff
+Set up the Strava stuff as a integration rather than the redirect instantly
+Save activities to a DB model
+Ingest Strava data async

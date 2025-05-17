@@ -1,8 +1,20 @@
 <h1>Activities </h1>
 <%# TODO make each row clickable to route to show page %>
-<% @activities.each do |activity| %>
-  Name : <%= activity["name"] %><br>
-  Distance : <%= activity["distance"] %><br>
-  Moving Time : <%= activity["moving_time"] %><br>
-  Sport Type : <%= activity["sport_type"] %><br><br>
+<%= nk_table do |t| %>
+  <%= t.thead do %>
+    <%= t.th "Name" %>
+    <%= t.th "Distance" %>
+    <%= t.th "Moving Time" %>
+    <%= t.th "Sport Type" %>
+  <% end %>
+  <%= t.tbody do %>
+    <% @activities.each do |activity| %>
+      <%= t.tr do %>
+        <%= t.td activity["name"] %>
+        <%= t.td activity["distance"] %>
+        <%= t.td activity["moving_time"] %>
+        <%= t.td activity["sport_type"] %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>

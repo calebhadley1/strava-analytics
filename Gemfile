@@ -65,3 +65,8 @@ group :test do
 end
 
 gem "shadcn-ui", "~> 0.0.15"
+
+gem "nitro_kit", "~> 0.6.0"
+
+gem "tailwindcss-rails", "~> 4.2"
+gem "lucide-rails"
