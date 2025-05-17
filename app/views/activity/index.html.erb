@@ -1,0 +1,8 @@
+<h1>Activities </h1>
+<%# TODO make each row clickable to route to show page %>
+<% @activities.each do |activity| %>
+  Name : <%= activity["name"] %><br>
+  Distance : <%= activity["distance"] %><br>
+  Moving Time : <%= activity["moving_time"] %><br>
+  Sport Type : <%= activity["sport_type"] %><br><br>
+<% end %>
